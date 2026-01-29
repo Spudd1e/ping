@@ -1,0 +1,10 @@
+name: pong
+on:
+    repository_dispatch:
+        types: [pong!]
+jobs:
+    pong:
+        runs-on: ubuntu-latest
+        steps:
+            - name: pong
+              run: echo ${{ github.event.client_payload.message}}
